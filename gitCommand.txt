@@ -1,0 +1,10 @@
+1. Create a repo on Github
+2. Install git by downloading it from its website 
+3. Run following commands
+    a. git init - run this command in a folder you can to put on git
+    b. git status 
+    c. git add <fileName> - add a file to the local repo
+    d. git commit -m "message"
+    e. git remote add origin https://github.com/Shelke99/programming_2026.git : only once - first time
+    f. git branch -M main : only once - first time
+    h. git push -u origin main : every time you add and commit
