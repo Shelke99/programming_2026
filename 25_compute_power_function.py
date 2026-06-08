@@ -7,3 +7,4 @@ def power_function():
         ans *= base
     return ans
 print(power_function())
+
