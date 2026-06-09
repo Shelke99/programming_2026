@@ -13,7 +13,7 @@ def string_construction():
         # print(i,le)
             
         rep = sz // le
-        # print(rep)
+        print(rep)
         # print(S[le])
         s1 = S[:le]
         print(s1)
@@ -23,7 +23,5 @@ def string_construction():
         if s2 == S:
             return True
     return False
-
-
 
 print(string_construction())
