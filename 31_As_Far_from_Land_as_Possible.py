@@ -42,4 +42,4 @@ def water_from_land(grid):
         dist += 1
     return dist
 
-print(water_from_land([[1,0,1],[0,0,0],[1,0,1]]))
+print(water_from_land([[1,0,1],[0,1,0],[1,0,1]]))
