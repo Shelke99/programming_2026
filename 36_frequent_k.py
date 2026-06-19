@@ -12,7 +12,7 @@ def freq_k(nums,k):
     # heapq.heapify(nums)
     # print(nums)
     for num in nums:
-        freq[num] = freq.get(1,0) + 1
+        freq[num] = freq.get(num,0) + 1
     # print(freq)
     heap = []
     for num,count in freq.items():
@@ -20,7 +20,7 @@ def freq_k(nums,k):
     
     ans = []
     for _ in range(k):
-        count,num = heapq.heappop(heap)
+        _,num = heapq.heappop(heap)
         ans .append(num)
     return ans
 
