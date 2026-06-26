@@ -95,3 +95,7 @@
 #         for j in range(1,n):
 #             print(i * j)
 # table(11)
+
+def inf_loop():
+    while True:
+        if 
