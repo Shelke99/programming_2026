@@ -96,6 +96,10 @@
 #             print(i * j)
 # table(11)
 
+def inf_loop():
+    while True:
+        if 
+
 # def pascles_triangle(n):
  
 #     for i in range(1, n+1):
