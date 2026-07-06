@@ -96,9 +96,9 @@
 #             print(i * j)
 # table(11)
 
-def inf_loop():
-    while True:
-        if 
+# def inf_loop():
+#     while True:
+#         if 
 
 # def pascles_triangle(n):
  
@@ -148,6 +148,38 @@ def inf_loop():
 #             return False
 #     return True
 # print(palindrom(121))
-def digit(sent):
-    st = ['a','e','e','i','o','u']
+# def digit(sent):
+#     st = ['a','e','e','i','o','u']
+
+# # is palindrom
+# def is_palindrom(num):
+# #     i = 0
+# #     j = len(num) - 1
+# #     while i < j:
+# #         if num[i] == num[j]:
+# #             i += 1
+# #             j -= 1
+# #             return True
+# #         else:
+# #             return False
+# #     # return False
+# # print(is_palindrom('malayalam'))
+#        nums = str(num)
+#        return  nums == nums[::-1]
+# print(is_palindrom('132231'))
+# 21.Count vowels and consonants in a string.
+def vowels_in_str(s):
+    string = len(s)
+    v = 0
+    c = 0
+    lst = ['a','e','i','o','u']
+
+    for i in range(len(s)):
+        if s[i] in lst:
+            v += 1
+        else:
+            c += 1
+    return v, c 
+print(vowels_in_str('priyanka'))
+
     
