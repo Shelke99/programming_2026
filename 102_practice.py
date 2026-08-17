@@ -192,19 +192,49 @@
 #     print(f"the value of pii is: {pi}")
 # pi_()
 # See what your language does when non-numeric text is entered where a number is expected. Then handle it: detect the bad input and re-prompt until a valid number arrives.
-def correct_v():
-    while True:
-        user_val = input("Enter the value: ")
+# def correct_v():
+#     while True:
+#         user_val = input("Enter the value: ")
 
-        try:
-            number = float(user_val)
-            break
+#         try:
+#             number = float(user_val)
+#             break
 
-        except ValueError:
-            print(f"❌ '{user_input}' is not a valid number. Please try again.\n")
-        print(f"✅ Success! You entered the number: {number}")
-correct_v()
+#         except ValueError:
+#             print(f"❌ '{user_input}' is not a valid number. Please try again.\n")
+#         print(f"✅ Success! You entered the number: {number}")
+# correct_v()
         
+# Read an integer and report whether it is positive, negative, or zero. Then rewrite it as a single (nested) conditional expression.
+def condition():
+    # read = int(input("enter the number: "))
+    # if read > 0:
+    #     print(f" it is positive: {read}")
+    # elif read < 0:
+    #     print(f" number is negative: {read}")
+    # else:
+    #     print(f"num is zero: {read}")
+
+    # if read > 0:
+    #     result = "positive"
+    # elif read < 0:
+    #     result = "Negative"
+    # else:
+    #     result = "Zero"
+    # print(f"The number is: {result}")
+
+    # result = "positive" if read > 0 else ("negative" if read < 0 else "zero")
+    # Read two integers; report if they are equal, otherwise which is larger. Also solve it with a one-line conditional expression.
+    a = int(input("enter the value of a: "))
+    b = int(input("enter the value of b: "))
+    c = int(input("enter the value of c: "))
+    # result  = "equal" if a == b else ( "a grater" if a > b else "b greater")
+    result = "a is greater" if a > b and a > c else ( "b is greater" if b > a and b > c else "c is greater")
+
+
+    print(f"The number is: {result}")
+
+condition()
 
 
 
