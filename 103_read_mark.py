@@ -17,7 +17,7 @@ def read_mark():
         status = "Pass"
     else:
         status = "Fail"
-    
+       
 
     if percentage >= 90:
         grade = "A"
