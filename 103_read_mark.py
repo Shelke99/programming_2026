@@ -2,7 +2,7 @@
 # (a) Pass/Fail, (b) a grade from an A–F ladder, and 
 # (c) read a grade character and print remarks for it using multi-way selection.
 
-def read_mark():
+# def read_mark():
 #     a = float(input("Entert the mark for subject 1: "))
 #     b = float(input("Entert the mark for subject 2: "))
 #     c= float(input("Entert the mark for subject 3: "))
@@ -146,25 +146,132 @@ def read_mark():
 
     # Read an operator (+, −, ×, ÷) and two numbers, 
     # and apply it. Reject unknown operators and division by zero with clear messages.
-    a = int(input("Enter the number first: "))
-    b = int(input("Enter the number second: "))
-    op = input("Enter the operator you want do operation(+, −, ×, ÷): ")
-    if op in ['+', '−', '×', '÷']:
-        if op == '+':
-            result = a + b
-        elif op == '-':
-            result = a - b
-        elif op == '*':
-            result = a * b
-        elif op == '%':
-            result = a * b
-        else:
-            result = "unknown operators and division by zero"
-        print(f"the output result is: {result}")
-    else:
-        print("unknown operators")
+#     a = int(input("Enter the number first: "))
+#     b = int(input("Enter the number second: "))
+#     op = input("Enter the operator you want do operation(+, −, ×, ÷): ")
+#     if op in ['+', '−', '×', '÷']:
+#         if op == '+':
+#             result = a + b
+#         elif op == '-':
+#             result = a - b
+#         elif op == '*':
+#             result = a * b
+#         elif op == '%':
+#             result = a * b
+#         else:
+#             result = "unknown operators and division by zero"
+#         print(f"the output result is: {result}")
+#     else:
+#         print("unknown operators")
 
 
 
-read_mark()
+# read_mark()
 
+# # LOOPINGG
+# Read n and print the numbers 1 through n.
+# Section drill (from the source sheet): 
+# solve every problem in this section twice — once with a while loop, once with a for loop
+
+def looping():
+    # n = int(input("Enter the number: "))
+    # for i in range(n + 1):
+    #     print(f" the given range is: {i}")
+
+    # Print all even numbers from 1 to n by stepping two at a time — no skipping logic needed.
+    # for i in range(2,n + 1,2):
+    #     print(i)
+
+    # Print 1 to N but skip, in turn: (a) odd numbers, (b) multiples of 3, (c) numbers ending in 5. 
+    # Use the loop's skip/continue mechanism rather than restructuring the loop.
+    # for i in range(n + 1):
+    #     if i % 2 != 0:
+    #         continue
+    #     if i % 3 == 0:
+    #         continue
+    #     if i % 10 == 5:
+    #         continue
+    #     print(i)
+    # Read n and compute, in separate loops: the sum 1..n, the sum of the 
+    # odd numbers up to n, and the sum of squares 1² + 2² + … + n².
+    # sum_all = 0
+    # for i in range(1, n+1):
+    #     sum_all += i
+    # print(f"the sum of  all number is {n}: {sum_all}")
+
+
+
+    # odd_all = 0
+    # for i in range(1, n + 1):
+    #     if i % 2 != 0:
+    #         odd_all += i
+    # print(f"the sum of odd number is {n}: {odd_all}")
+
+
+    # sqr_all = 0
+    # for i in range(n + 1):
+    #     sqr_all += i * i
+    # print(f"the sum of square of number is {n}: {sqr_all}")
+    
+
+    # Print the multiplication table of a given number (e.g. 7 × 1 through 7 × 10).
+    # n = 7
+    # i = 1
+    # while i < 11:
+    #     print(f"{n} x {i} : {i * n}")
+    #     i += 1
+
+    # Print the letters A–Z alongside their numeric character codes, one pair per line.
+    # for code in range(65,91):
+    #     character = chr(code)
+    #     print(f"Letters : {character} -> {code}")
+
+    # Compute xʸ for a non-negative integer y using repeated multiplication — no library power function.
+    
+    # x = float(input("Enter the base (x): "))
+    # y = int(input("Enter a non-negative integer exponent (y): "))
+    # result = 1.0
+    # for i in range(y):
+    #     result *= x
+    # print(f"{x} raised to the power of {y} is: {result}")
+    # #  Read n, then read n numbers one at a time and report their minimum, maximum, and average without storing them all.
+    
+        n = int(input("Enter how many numbers you have: "))
+        min_ = None
+        max_ = None
+        sum_ = 0
+        for i in range(1, n + 1):
+            num = int(input(f"Enter the numbers{i}:  "))
+            sum_ += num
+            if min_ is None:
+                min_ = num
+                max_ = num
+            else:
+                if num < min_:
+                    min_ = num
+                if num > max_:
+                    max_ = num
+        if n > 0:
+            average = sum_ / n
+            print(f"Minimum: {min_}")
+            print(f"Maximum: {max_}")
+            print(f"Average: {average:.2f}")
+
+
+
+
+
+
+    #     nums = [ ]
+    #     for i in range(1, n + 1):
+    #         nums.append(i)
+    #     print(nums)
+        
+    #     print(min(nums))
+    #     print(max(nums))
+        
+    #     print(sum(nums) / n)
+
+
+
+looping()
