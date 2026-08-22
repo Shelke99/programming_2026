@@ -751,6 +751,27 @@
 
 # Print a centered star pyramid of height h, then
 #  extend it to a diamond. The trick is counting the spaces before the stars.
+# Print the header row to show the numbers 2 through 11
+print("    ", end="")
+for header in range(2, 12):
+    print(f"{header:>5}", end="")
+print("\n" + "—" * 55)
+
+# Outer loop: Controls the multiplier entries (1 through 10)
+for entry in range(1, 11):
+    # Print the side label for the current row
+    print(f"{entry:2} |", end="")
+    
+    # Inner loop: Controls the tables (2 through 11)
+    for table in range(2, 12):
+        # Calculate the result
+        result = table * entry
+        # Print the result spaced nicely to align columns
+        print(f"{result:>5}", end="")
+        
+    # Print a new line at the end of each row
+    print()
+
 
 
     
