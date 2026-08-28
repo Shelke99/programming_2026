@@ -1,0 +1,14 @@
+FROM python:3.13.7-slim
+WORKDIR /u01/app/config/website_bot/
+
+COPY requirements.txt .
+
+RUN pip install --upgrade pip \
+ && pip install -r requirements.txt
+
+COPY . .
+
+EXPOSE 8250
+
+CMD ["python", "/u01/app/config/website_bot/website_bot.py"]
+
