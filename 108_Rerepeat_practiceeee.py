@@ -337,21 +337,203 @@ def Basic_op():
 
     # Sort Three Numbersi
     # Read three numbers and print them in ascending order using only comparisons and swaps — no arrays, no library sort.
-    a = int(input("enter the num 1"))
-    b = int(input("enter the num 2: "))
-    c = int(input("enter the num 3: "))
+    # a = int(input("enter the num 1"))
+    # b = int(input("enter the num 2: "))
+    # c = int(input("enter the num 3: "))
 
-    if a > b :
-        a , b = b , a
-    if b > c:
-        b , c = c , b
-    if a > b:
-        a , b = b , a
-    result = a,b,c 
-    print(result) 
+    # if a > b :
+    #     a , b = b , a
+    # if b > c:
+    #     b , c = c , b
+    # if a > b:
+    #     a , b = b , a
+    # result = a,b,c 
+    # print(result) 
+    # Electricity Bill Slabsi
+    # Compute an electricity bill with slab pricing: the first 100 units at one rate, the 
+    # next 100 at a higher rate, everything beyond at a third. Print an itemized bill.
+    # units = 250
+    # r1 = 4.50
+    # r2 = 7.50
+    # r3 = 10.50
+
+    # if units <= 100:
+    #     s1 = units
+    #     s2 = 0
+    #     s3 = 0
+    # elif units <= 200:
+    #     s1 = 100
+    #     s2 = units - 100
+    #     s3 = 0
+    # else:
+    #     s1 = 100
+    #     s2 = 100
+    #     s3 = units - 200
+    # c1 = s1 * r1
+    # c2 = s2 * r2
+    # c3 = s3 * r3
+    # total_bill= c1 + c2 + c3
+    # print(total_bill) 
+    
+    
+
+    # Four-Function Calculatori
+    # Read an operator (+, −, ×, ÷) and two numbers, and apply it. 
+    # Reject unknown operators and division by zero with clear messages.
+    # op = input("Enter the operator(+, -, *, /): ")
+    # if op not in ['+', '-', '*', '/' ]:
+    #     result = "unkon operators"
+    # else:
+    #     a = int(input("enter the num 1"))
+    #     b = int(input("enter the num 2: "))
+    #     if op == '+':
+    #         result = a + b
+    #     elif op == '-':
+    #         result = a - b
+    #     elif op == '*':
+    #         result = a * b
+    #     elif op == '/':
+    #         if b == 0:
+    #             result = "division by zero not allowed"
+    #         else:
+    #             result == (a / b)
+    #     else:
+    #         result = "unknown"
+    # print(result)
+
+
+    # Count to ni
+    # Read n and print the numbers 1 through n.
+    # Section drill (from the source sheet): solve every problem in this section twice —
+    # once with a while loop, once with a for loop.
+    # n = int(input("Enter the number: "))
+    # i = 1
+    # while i <= n:
+    #     print(f"the number is : {i}")
+    #     i += 1
+
+    # for i in range(1, n + 1):
+    #     print(i)
+    
+
+
+    # Evens Onlyi
+    # Print all even numbers from 1 to n by stepping two at a time — no skipping logic needed.
+
+    # i = 2
+    # while i <= n:
+    #     print(i)
+    #     i += 2
+    # for i in range(n + 1):
+    #     if i % 2 == 0:
+    #         print(i)
+    
+    # Skip by Rulei
+    # 1 to N but skip, in turn: (a) odd numbers, (b) multiples of 3,
+    # # (c) numbers ending in 5. Use the loop's skip/continue mechanism rather than restructuring the loop.
+    # i = 1
+    # while i <= n:
+    #     if (i % 2 != 0 or i % 3 == 0 or i % 10 == 5):
+    #         i += 1
+    #         continue
+    #     print(i) 
+    #     i += 1
+    # for i in range(n + 1):
+    #     if (i % 2 != 0 or i % 3 == 0 or i % 10 == 5):
+    #         continue
+    #     print(i)
+        
+        
+     
 
 
 
+
+    #  37	Running Totalsi
+    # Read n and compute, in separate loops:
+    # the sum 1..n, the sum of the odd numbers up to n, and the sum of squares 1² + 2² + … + n².
+    # odd_total = 0
+    # i = 1
+    # while i <= n:
+    #     odd_total += i
+    #     i += 1
+    
+    # # print(odd_total)
+    # for i in range(n + 1):
+    #     odd_total += i
+    # print(odd_total)
+
+
+
+    # 38	Multiplication Tablei
+    # Print the multiplication table of a given number (e.g. 7 × 1 through 7 × 10).
+    # i = 1
+    
+    # while i <= 10:
+    #     print(f" tha table of {n, 'x', i } : {n * i}")
+    #     i += 1
+    # for i in range(1, 11):
+    #     print(i * n)
+
+
+    # 39	Letters & Codesi
+    # Print the letters A–Z alongside their numeric character codes, one pair per line.
+    # n = int(input("Enter the number: "))
+    # i = 65
+    # letter = 0
+    # while i < 91:
+    #     letter = chr(i)
+    #     i += 1
+    #     print(f"{i} : {letter}") 
+    # for i in range(65, 92):
+    # # while 
+    #     letter = chr(i)
+    #     print(f"the ascii code of num is {i}:{letter}")
+    # import string
+    # num = 0 
+    # # char = input("Enter the number: ")
+    # for char in string.ascii_uppercase:
+    #     num = ord(char)
+    #     print(f" {char } : {num}")
+
+    #  40	Power Without pow()i
+    # # Compute xʸ for a non-negative integer y using repeated multiplication — no library power function.    
+    # base = int(input("Enter the number: "))
+    # power = int(input("Enter the number: "))
+    # c_power = base ** power
+    # print(c_power)
+    # 41	Min, Max & Average of a Streami
+    # Read n, then read n numbers one at a time and report their minimum, maximum, and average without storing them all.
+    # # while n > 0:
+    # total_sum = 0
+    # min_ = None
+    # max_ = None
+    n = int(input("Enter the number you want : "))
+
+    # for i in range(n):
+    #     a = int(input(f"Enter the number {i+1}: "))
+        
+    #     total_sum += a
+    #     if min_ is None or a < min_:
+    #         min_ = a
+    #     if max_ is None or a > max_:
+    #         max_ = a
+    # avg = total_sum / n
+    # print(avg)
+    # print(min_)
+    # # print(max_)
+    # # Harmonic Sumi
+    # # Compute 1 + 1/2 + 1/3 + … + 1/n. Watch what happens if the division is done with integers.
+    # for i in range(1,n + 1):
+    #     hm = 1 + (1 / i)
+    #     print(hm)
+    
+    # Doubling Seriesi
+    # Compute 1 + 2 + 4 + … + 2ⁿ. Print each partial sum and notice how fast it grows — and where your integer type overflows.
+    for i in range(1, n + 1):
+        hm = 1 + 2 ** i
+        print(hm)
+    
 Basic_op()
 
     
