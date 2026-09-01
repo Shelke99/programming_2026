@@ -530,10 +530,27 @@ def Basic_op():
     
     # Doubling Seriesi
     # Compute 1 + 2 + 4 + … + 2ⁿ. Print each partial sum and notice how fast it grows — and where your integer type overflows.
-    for i in range(1, n + 1):
-        hm = 1 + 2 ** i
-        print(hm)
-    
+    # for i in range(1, n + 1):
+    #     hm = 1 + 2 ** i
+    #     print(hm)
+ 
+ 
+    # Fibonaccii
+    # Print the first n terms of the Fibonacci series, keeping only the last two values as you go.
+    a = 0
+    b = 1 
+    i = 1
+    # for i in range(n + 1):
+    while i <= n:
+        a, b = b , a + b
+        print(a) 
+        i += 1
+
+
+
+
+
+
 Basic_op()
 
     
