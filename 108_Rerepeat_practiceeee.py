@@ -537,19 +537,113 @@ def Basic_op():
  
     # Fibonaccii
     # Print the first n terms of the Fibonacci series, keeping only the last two values as you go.
-    a = 0
-    b = 1 
-    i = 1
-    # for i in range(n + 1):
-    while i <= n:
-        a, b = b , a + b
-        print(a) 
-        i += 1
+    # a = 0
+    # b = 1 
+    # i = 1
+    # # for i in range(n + 1):
+    # while i <= n:
+    #     a, b = b , a + b
+    #     print(a) 
+    #     i += 1
+    
+    
+    
+    
+    # 45	Factoriali
+    # Compute n! with a loop. Find the largest n your integer type can handle before overflowing.
+    # fact = 1
+    # for i in range(1,n + 1):
+    #     fact *= i
+    #     print(fact)
+    # fact = 1
+    # i = 1
+    # while i <= n:
+    #     fact *= i
+    #     print(fact)
+    #     i += 1
+    
+    
+    # 	Digits, One Per Linei
+    # Print a number's digits one per line using division and remainder by 10. In what order do they come out?
+    # while n > 0:
+    #     ans = 0
+        
+    #     temp = n % 10
+        
+    #     print(ans)
+
+    # #     n = n // 10
+    # for i in str(n):
+    #     tmp = n % 10
+    #     t = tmp
+    #     print(t)
+    #     n = n // 10
+    
+    
+    
+    # 47	Count the Digitsi
+    # Count how many digits a number has via repeated division by 10. Mind the edge case n = 0.
+    # count = 0 
+    # # while n > 0:
+    # for temp in str(n):
+        
+    #     temp = n % 10
+    #     count += 1
+    
+    #     n = n // 10
+    # print(count)
 
 
 
+    	# Medium	New
+    # 48	Sum of Digitsi
+    # Add up the digits of a number. Extend: repeat until a single digit remains (the digital root).
+    # total = 0
+    # # while n > 0:
+    # for t in str(n):
+    #     t = n % 10
+    #     total += t
+    #     root = t
+        
+    #     n = n // 10
+    # print(t)
+    # print(total)
 
 
+    #  49	Reverse a Numberi
+    # Reverse a number's digits arithmetically (e.g. 1234 → 4321) — no string conversion.
+    # ans = 0 
+    # while n > 0:
+       
+    #     ans = (ans * 10) + (n % 10)
+        
+    #     n = n // 10
+    # print(ans)
+    # ans = 0 
+    # for t in str(n):
+    #     t = (n % 10)
+    #     ans = (ans * 10) + t 
+        
+    #     n = n // 10
+    # print(ans)
+    
+
+
+    # 	Medium	New
+    # 50	Numeric Palindromei
+    # Check whether a number reads the same reversed, reusing the digit-reversal idea.
+    cp = n
+    ans = 0 
+    while n > 0:
+
+        ans = (ans * 10) + (n % 10)
+        n = n // 10
+    print(ans)
+    if cp == ans:
+        print("is palindrom")
+    else:
+        print("not")
+    
 
 Basic_op()
 
