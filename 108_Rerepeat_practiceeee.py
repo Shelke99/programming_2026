@@ -2,8 +2,8 @@
 # Read two integers and print their sum, difference, and product — 
 # (a) computing into a separate result variable, 
 # (b) printing the expressions directly without one.
-import math
-def Basic_op():
+# import math
+# def Basic_op():
 #     a = int(input("Enter the number first: "))
 #     b = int(input("Enter the number second: "))
 
@@ -508,7 +508,8 @@ def Basic_op():
     # total_sum = 0
     # min_ = None
     # max_ = None
-    n = int(input("Enter the number you want : "))
+    # import math
+    # n = int(input("Enter the number you want : "))
 
     # for i in range(n):
     #     a = int(input(f"Enter the number {i+1}: "))
@@ -632,19 +633,64 @@ def Basic_op():
     # 	Medium	New
     # 50	Numeric Palindromei
     # Check whether a number reads the same reversed, reusing the digit-reversal idea.
-    cp = n
-    ans = 0 
-    while n > 0:
+    # cp = n
+    # ans = 0 
+    # while n > 0:
 
-        ans = (ans * 10) + (n % 10)
-        n = n // 10
-    print(ans)
-    if cp == ans:
-        print("is palindrom")
-    else:
-        print("not")
+    #     ans = (ans * 10) + (n % 10)
+    #     n = n // 10
+    # print(ans)
+    # if cp == ans:
+    #     print("is palindrom")
+    # else:
+    #     print("not")
     
 
-Basic_op()
+
+    # 	Prime or Compositei
+    # Check whether a number is prime by trial division — and explain why testing divisors up to √n suffices.
+    
+
+    # is_prime = True
+    # num = int(math.sqrt(n))
+    # for i in range(2, num + 1):
+    #     if i % num == 0:
+    #         is_prime = False
+    #         break
+    # if is_prime == False:
+    #     print("the given num is prime: ", num)
+    # else:
+    #     print("num is not prime: ",num)
+    
+import math
+
+def check_prime_or_composite(n):
+    """
+    Checks if a number is prime or composite.
+    Returns the classification string in Marathi.
+    """
+    if n <= 1:
+        return "ही संख्या मूळ किंवा संयुक्त नाही (Neither Prime nor Composite)"
+    if n <= 3:
+        return "मूळ संख्या (Prime Number) आहे"
+        
+    # FIX 1: Returns False/Composite for multiples of 2 and 3
+    if n % 2 == 0 or n % 3 == 0:
+        return "संयुक्त संख्या (Composite Number) आहे"
+    
+    limit = int(math.sqrt(n))
+    for i in range(5, limit + 1, 6):
+        if n % i == 0 or n % (i + 2) == 0:
+            return "संयुक्त संख्या (Composite Number) आहे"
+            
+    return "मूळ संख्या (Prime Number) आहे"
+
+# --- Executing User Input Safely ---
+try:
+    user_num = int(input("Enter the number you want to check: "))
+    result = check_prime_or_composite(user_num)
+    print(f"निकाल (Result) for {user_num}: {result}")
+except ValueError:
+    print("कृपया वैध पूर्ण संख्या (valid integer) टाईप करा.")
 
     
