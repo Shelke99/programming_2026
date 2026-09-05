@@ -662,35 +662,96 @@
     # else:
     #     print("num is not prime: ",num)
     
-import math
+# import math
 
-def check_prime_or_composite(n):
-    """
-    Checks if a number is prime or composite.
-    Returns the classification string in Marathi.
-    """
-    if n <= 1:
-        return "ही संख्या मूळ किंवा संयुक्त नाही (Neither Prime nor Composite)"
-    if n <= 3:
-        return "मूळ संख्या (Prime Number) आहे"
+# def check_prime_or_composite(n):
+#     """
+#     Checks if a number is prime or composite.
+#     Returns the classification string in Marathi.
+#     """
+#     if n <= 1:
+#         return "ही संख्या मूळ किंवा संयुक्त नाही (Neither Prime nor Composite)"
+#     if n <= 3:
+#         return "मूळ संख्या (Prime Number) आहे"
         
-    # FIX 1: Returns False/Composite for multiples of 2 and 3
-    if n % 2 == 0 or n % 3 == 0:
-        return "संयुक्त संख्या (Composite Number) आहे"
+#     # FIX 1: Returns False/Composite for multiples of 2 and 3
+#     if n % 2 == 0 or n % 3 == 0:
+#         return "संयुक्त संख्या (Composite Number) आहे"
     
-    limit = int(math.sqrt(n))
-    for i in range(5, limit + 1, 6):
-        if n % i == 0 or n % (i + 2) == 0:
-            return "संयुक्त संख्या (Composite Number) आहे"
+#     limit = int(math.sqrt(n))
+#     for i in range(5, limit + 1, 6):
+#         if n % i == 0 or n % (i + 2) == 0:
+#             return "संयुक्त संख्या (Composite Number) आहे"
             
-    return "मूळ संख्या (Prime Number) आहे"
+#     return "मूळ संख्या (Prime Number) आहे"
 
-# --- Executing User Input Safely ---
-try:
-    user_num = int(input("Enter the number you want to check: "))
-    result = check_prime_or_composite(user_num)
-    print(f"निकाल (Result) for {user_num}: {result}")
-except ValueError:
-    print("कृपया वैध पूर्ण संख्या (valid integer) टाईप करा.")
+# # --- Executing User Input Safely ---
+# try:
+#     user_num = int(input("Enter the number you want to check: "))
+#     result = check_prime_or_composite(user_num)
+#     print(f"निकाल (Result) for {user_num}: {result}")
+# except ValueError:
+#     print("कृपया वैध पूर्ण संख्या (valid integer) टाईप करा.")
 
+# Smallest Divisor > 1
+# Find the smallest divisor greater than 1 of a number, stopping the
+# loop as soon as it is found. What does it mean if the answer is the number itself?    
+# def s_div(a,b):
+    # for i in range(2, n):
+    #     if n % i == 0:
+    #         # print(i)
+    #         return i
+    #         break
+    # x, y = a, b
+
+
+
+    #  54	GCD & LCMi
+#     # Compute the GCD of two numbers (Euclid's remainder method encouraged) and derive the LCM from it.
+ 
+ 
+#     while y:
+#         x, y = y , x % y
+#         # derive LCM for GCD
+#     lcm = (a * b) // x
+#     return x, lcm
+
+
+
+
+
+# gcd_val, lcm_val = s_div(54,24)
     
+# print(f"GCD: {gcd_val}, LCM: {lcm_val}")
+
+
+# 55	Nearest Multiplesi
+# (a) Find the first number greater than n that is divisible by 7. (b) Find the largest number ≤ N divisible by both 4 and 6.
+#    Part (b) restated from the sheet — the original "smallest number ≤ N divisible by 4 and 6" is always
+# def n_divisible(n):
+#     return n + (7 - n % 7) 
+# def lcm_(N):
+#     return N - (N % 12)
+
+# print(lcm_(22))
+# print(n_divisible(22))
+
+# 56	Armstrong Numbersi
+# Find all Armstrong numbers in a range — numbers equal to the sum 
+# of their digits each raised to the digit-count power (e.g. 153 = 1³ + 5³ + 3³).
+def is_armstrong(n):
+    l = str(n)
+    power = len(l)
+    total = 0
+    for i in l:
+        total += int(i) ** power 
+    return total == n 
+    
+
+def find_arm(s, e):
+    result = []
+    for n in range(s, e + 1):
+        if is_armstrong(n):
+            result.append(n)
+    return result
+print(find_arm(1,5000))
