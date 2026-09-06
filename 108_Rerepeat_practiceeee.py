@@ -738,20 +738,98 @@
 
 # 56	Armstrong Numbersi
 # Find all Armstrong numbers in a range — numbers equal to the sum 
-# of their digits each raised to the digit-count power (e.g. 153 = 1³ + 5³ + 3³).
-def is_armstrong(n):
-    l = str(n)
-    power = len(l)
-    total = 0
-    for i in l:
-        total += int(i) ** power 
-    return total == n 
+# # of their digits each raised to the digit-count power (e.g. 153 = 1³ + 5³ + 3³).
+# def is_armstrong(n):
+#     l = str(n)
+#     power = len(l)
+#     total = 0
+#     for i in l:
+#         total += int(i) ** power 
+#     return total == n 
     
 
-def find_arm(s, e):
-    result = []
-    for n in range(s, e + 1):
-        if is_armstrong(n):
-            result.append(n)
-    return result
-print(find_arm(1,5000))
+# def find_arm(s, e):
+#     result = []
+#     for n in range(s, e + 1):
+#         if is_armstrong(n):
+#             result.append(n)
+#     return result
+# print(find_arm(1,5000))
+
+
+# 7	Strong Numberi
+# Check whether a number equals the 
+# sum of the factorials of its digits (e.g. 145 = 1! + 4! + 5!).
+# def Strong_num(n):
+#     original = n
+#     total = 0         
+#     while n > 0:
+#         digits = n % 10
+#         fact = 1
+
+#         for i in range(1, digits + 1):
+#             fact *= i
+#         total += fact
+#         n = n // 10
+#     return total == original
+
+# print(Strong_num(145))
+
+# 58	Perfect Numberi
+# Check whether a number equals the sum of 
+# its proper divisors (e.g. 28 = 1 + 2 + 4 + 7 + 14).
+# def perfect(n):
+#     original = n
+#     total = 0
+#     for i in range(1, n):
+#         if n % i == 0:
+#             total += i 
+#             # print(total)
+#     return total == original
+# print(perfect(28))
+
+# Amicable Pairi
+# Check whether two numbers are amicable: 
+# each equals the sum of the other's proper divisors (220 and 284
+# def is_div(a,b):
+
+#     a_sum = 0
+#     b_sum = 0
+#     for i in range(1, a):
+#         if a % i == 0:
+#             a_sum += i
+#     print(a_sum)
+#     # return b == a_sum
+#     for j in range(1,b):
+#         if b % j == 0:
+#             b_sum += j
+#     print(b_sum)
+#     return a == b_sum
+
+        
+
+# print(is_div(220, 284))
+    
+	# Prime Factorizationi
+# For every number from 1 to n, print its prime-factored form (e.g. 12 = 2 × 2 × 3).
+def prime_factors(num):
+    factors = []
+    divisor = 2
+    while num > 1:
+        while num % divisor == 0:
+            factors.append(divisor)
+            num //= divisor
+            
+        divisor += 1
+
+    return factors
+
+def print_prime_factors(n):
+    for num in range(1, n + 1):
+        factors = prime_factors(num)
+        if num == 1:
+            print("factors is 1")
+        else:
+            print(num, "=", "x".join(map(str, factors)))
+# print(print_prime_factors(12))
+print_prime_factors(12)
