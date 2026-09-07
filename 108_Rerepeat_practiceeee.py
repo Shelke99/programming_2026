@@ -862,19 +862,33 @@
 # 	Prime or Compositei
 # Check whether a number is prime by trial division — 
 # and explain why testing divisors up to √n suffices.
-import math
-def find_prime(n):
+# import math
+# def find_prime(n):
 
-    if n < 2:
-        return False
+#     if n < 2:
+#         return False
 
-    # for i in range(2, int(math.sqrt(n) + 1)):
+#     # for i in range(2, int(math.sqrt(n) + 1)):
 
-    i = 2
-    while i * i <= n:
+#     i = 2
+#     while i * i <= n:
+#         if n % i == 0:
+#             return False
+#         i += 1
+#     return True
+
+# print(find_prime(97))
+
+
+# 58	Perfect Numberi
+# Check whether a number equals the sum of 
+# its proper divisors (e.g. 28 = 1 + 2 + 4 + 7 + 14).
+def perfect_num(n):
+    num = n
+    total_sum = 0
+    for i in range(1, n):
         if n % i == 0:
-            return False
-        i += 1
-    return True
-
-print(find_prime(97))
+            total_sum += i
+            print(total_sum)
+    return total_sum == num
+print(perfect_num(28))
