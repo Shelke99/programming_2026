@@ -837,24 +837,44 @@
 
 # Prime Factorizationi
 # For every number from 1 to n, print its prime-factored form (e.g. 12 = 2 × 2 × 3).
-def find_factor(num):
-    factors = []
-    divisor = 2 
+# def find_factor(num):
+#     factors = []
+#     divisor = 2 
 
-    while num > 1:
-        while num % divisor == 0:
-            factors.append(divisor)
-            num //= divisor
+#     while num > 1:
+#         while num % divisor == 0:
+#             factors.append(divisor)
+#             num //= divisor
         
-        divisor += 1
-    return factors 
+#         divisor += 1
+#     return factors 
 
-# print(find_factor(12))
-def print_factors(n):
-    for i in range(1, n + 1):
-        factors = find_factor(i)
-        if i == 1:
-            print("factor is 1")
-        else:
-            print(i, "=", 'x'.join(map(str,factors)))
-print(print_factors(12))
+# # print(find_factor(12))
+# def print_factors(n):
+#     for i in range(1, n + 1):
+#         factors = find_factor(i)
+#         if i == 1:
+#             print("factor is 1")
+#         else:
+#             print(i, "=", 'x'.join(map(str,factors)))
+# print(print_factors(12))
+
+# 	Prime or Compositei
+# Check whether a number is prime by trial division — 
+# and explain why testing divisors up to √n suffices.
+import math
+def find_prime(n):
+
+    if n < 2:
+        return False
+
+    # for i in range(2, int(math.sqrt(n) + 1)):
+
+    i = 2
+    while i * i <= n:
+        if n % i == 0:
+            return False
+        i += 1
+    return True
+
+print(find_prime(97))
