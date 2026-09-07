@@ -812,24 +812,49 @@
     
 	# Prime Factorizationi
 # For every number from 1 to n, print its prime-factored form (e.g. 12 = 2 × 2 × 3).
-def prime_factors(num):
+# def prime_factors(num):
+#     factors = []
+#     divisor = 2
+#     while num > 1:
+#         while num % divisor == 0:
+#             factors.append(divisor)
+#             num //= divisor
+            
+#         divisor += 1
+
+#     return factors
+
+# def print_prime_factors(n):
+#     for num in range(1, n + 1):
+#         factors = prime_factors(num)
+#         if num == 1:
+#             print("factors is 1")
+#         else:
+#             print(num, "=", "x".join(map(str, factors)))
+# # print(print_prime_factors(12))
+# print_prime_factors(12)
+
+
+# Prime Factorizationi
+# For every number from 1 to n, print its prime-factored form (e.g. 12 = 2 × 2 × 3).
+def find_factor(num):
     factors = []
-    divisor = 2
+    divisor = 2 
+
     while num > 1:
         while num % divisor == 0:
             factors.append(divisor)
             num //= divisor
-            
+        
         divisor += 1
+    return factors 
 
-    return factors
-
-def print_prime_factors(n):
-    for num in range(1, n + 1):
-        factors = prime_factors(num)
-        if num == 1:
-            print("factors is 1")
+# print(find_factor(12))
+def print_factors(n):
+    for i in range(1, n + 1):
+        factors = find_factor(i)
+        if i == 1:
+            print("factor is 1")
         else:
-            print(num, "=", "x".join(map(str, factors)))
-# print(print_prime_factors(12))
-print_prime_factors(12)
+            print(i, "=", 'x'.join(map(str,factors)))
+print(print_factors(12))
