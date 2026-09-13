@@ -883,12 +883,27 @@
 # 58	Perfect Numberi
 # Check whether a number equals the sum of 
 # its proper divisors (e.g. 28 = 1 + 2 + 4 + 7 + 14).
-def perfect_num(n):
-    num = n
-    total_sum = 0
-    for i in range(1, n):
-        if n % i == 0:
-            total_sum += i
-            print(total_sum)
-    return total_sum == num
-print(perfect_num(28))
+# def perfect_num(n):
+#     num = n
+#     total_sum = 0
+#     for i in range(1, n):
+#         if n % i == 0:
+#             total_sum += i
+#             print(total_sum)
+#     return total_sum == num
+# print(perfect_num(28))
+
+
+
+# find the duplicate number and remove the duplicate and inplace the arrays number i ascending order 
+def find_duplicate(nums):
+    w = 0
+    r = 1
+    while r < len(nums):
+        if nums[w] != nums[r]:
+            w += 1
+            nums[w] = nums[r]
+        r += 1
+    return w + 1
+
+print(find_duplicate([0,0,1,1,1,2,2,3,3,4]))
