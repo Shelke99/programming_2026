@@ -13,9 +13,13 @@ def anagram(s,t):
         else:
             s2[ch] = 1
     for ch in s1:
-        if s1[ch] != s2[ch]:
-            print()
+        if ch not in s2:
             return False
-        # if 
+
+        if s1[ch] != s2[ch]:
+            return False
+
+       
     return True
+print(anagram('rat', 'car'))
 print(anagram('anagram', 'nagaram'))
