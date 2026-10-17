@@ -225,15 +225,81 @@ def condition():
 
     # result = "positive" if read > 0 else ("negative" if read < 0 else "zero")
     # Read two integers; report if they are equal, otherwise which is larger. Also solve it with a one-line conditional expression.
-    a = int(input("enter the value of a: "))
-    b = int(input("enter the value of b: "))
-    c = int(input("enter the value of c: "))
-    # result  = "equal" if a == b else ( "a grater" if a > b else "b greater")
-    result = "a is greater" if a > b and a > c else ( "b is greater" if b > a and b > c else "c is greater")
+    # a = int(input("enter the value of a: "))
+    # b = int(input("enter the value of b: "))
+    # c = int(input("enter the value of c: "))
+    # # result  = "equal" if a == b else ( "a grater" if a > b else "b greater")
+    # result = "a is greater" if a > b and a > c else ( "b is greater" if b > a and b > c else "c is greater")
+
+    # Read an integer and report odd or even. Then write it as a one-line conditional expression.
+    # num = int(input("Enter the number: "))
+    # result = "even" if num % 2 == 0 else "Odd"
 
 
-    print(f"The number is: {result}")
+    # print(f"The number is: {result}")
+    # Determine whether a given year is a leap year using the full rule: divisible by 4, except centuries, unless divisible by 400.
+    # year = int(input("Enter the year: "))
+    # result = "leap year" if year % 400 == 0 else ("leap year" if year % 100 != 0 and year % 4 == 0 else "not leap year")
+    # print(f"the year is the {result}")
 
+    # Read a character and classify it as a letter, a digit, or a special character.
+
+    # char = input("Enter the char: ").lower()
+    # result = "is character" if char.isalpha() else ("is number" if char.isdigit() else "special character")
+    # print(result)
+
+    # Read a letter and report (a) vowel or consonant, (b) uppercase or lowercase.
+    # result = "is vowel" if char in ('a','e', 'i', 'o', 'u') else "consonant"
+    # print(result)
+
+
+
+    # From cost price and selling price, report profit, loss, or break-even — and the amount.
+    # cost_price = float(input("Enter the cost price: "))
+    # selling_price = float(input("Enter the selling price: "))
+    # result = "Pofit" if selling_price > cost_price else ("loss" if cost_price > selling_price else "break_even")
+    # print(result)
+
+
+    # Warm-up: compare a number to 10 and print "small" / "large" / "equal". Then the ladder: below 100 "small", 100–200 "large", 201–300 "bigger", 301–400 "largest", above 400 "very large
+     
+    # num = int(input("enter the number(0, 6):"))
+    # #  result = "small" if (num <  100) else ("larg" if (100 <= num <= 200) else ("bigger" if (201 <= num <= 300) else ("largest" if (301 <= num < 400) else "very largest")))
+    # #  print(result)
+    # if num == 0:
+    #     result = "Sunday"
+    # elif num == 1:
+    #     result = "Monday"
+    # elif num == 2:
+    #     result = "Tuesday"
+    # elif num == 3:
+    #     result = "Wensday"
+    # elif num == 4:
+    #     result = "Thrusday"
+    # elif num == 5:
+    #     result = "Friday"
+    # elif num == 6:
+    #     result = "Saturday"
+    # else:
+    #     result = "incorrect value"
+    #     print()
+    # print(result)
+
+
+    # Read three angles and check whether they form a valid triangle: every angle greater than 0° and the three summing to exactly 180°.
+    # a = int(input("enter the value of a: "))
+    # b = int(input("enter the value of b: "))
+    # c = int(input("enter the value of c: "))
+    
+    # total = a + b + c111342134132411324113241113421324113421342134213243421324134213411342213241113134213134131313211342134113421342551341431431341342134134213134211341342134134134134313421341354333333333333333333333333333333312
+
+    a = [1,2,3,4]
+    b= [5,6,7,8]
+    c = a * b
+    
+    print(c)
+    
+    
 condition()
 
 
